@@ -1,8 +1,10 @@
 import { ReactNode, useState } from "react";
 import { Menu, Input, Row, Col } from "antd";
 import Link from "next/link";
+import styled from "styled-components";
 import routes from "../route";
 import LoginForm from "./LoginForm";
+import UserProfile from "./UserProfile";
 
 interface IAppLayoutProps {
   children: ReactNode;
@@ -30,13 +32,23 @@ const AppLayout = ({ children }: IAppLayoutProps) => {
       </Menu>
       <Row gutter={8}>
         <Col xs={24} md={6}>
-          {isLoggedIn || <LoginForm />}
+          {isLoggedIn ? (
+            <UserProfile setIsLoggedIn={setIsLoggedIn} />
+          ) : (
+            <LoginForm setIsLoggedIn={setIsLoggedIn} />
+          )}
         </Col>
         <Col xs={24} md={12}>
           {children}
         </Col>
         <Col xs={24} md={6}>
-          오른쪽 메뉴
+          <a
+            href="https://velog.io/@geuni1013"
+            target="_blank"
+            rel="_noreferrer noopener"
+          >
+            Made by Geunhee
+          </a>
         </Col>
       </Row>
     </div>
