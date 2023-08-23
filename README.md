@@ -8,4 +8,3 @@ Credits to [소라연](https://github.com/sorayeon/react-nodebird-toolkit)
 버그가 있을 시 인프런이나 깃헙 issue로 남겨주시면 빠르게 해결하겠습니다.
 
 [https://nodebird.com](https://nodebird.com)에서 실제 실행 결과물을 확인하실 수 있습니다.
-
